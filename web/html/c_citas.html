@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto_CS</title>
+    <link rel="stylesheet" href="../css/estilo_cliente.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../img/I_Logo.jpg" alt="Logo_Marca">
+        </div>
+
+        <nav>
+            <br>
+            <ul class="Links">
+                <li><a href="c_enproceso.html">En Proceso</a></li>
+                <li><a href="c_finalizado.html">Finalizado</a></li>
+                <li><a href="c_new_c.html">Agendar</a></li>
+                <li><a href="c_citas.html">Historial</a></li>
+                <li><a href="c_nosotros.html">Nosotros</a></li>
+                <li>
+                    <p><span id="Name_Usuario" onclick="mostrarAlertaUsuario()"></span></p>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="#" class="btn"><button onclick="M_Cerrar()">Cerrar Sesión</button></a>
+    </header>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="content">
+        <div class="form-container">
+            <table id="citasTable">
+                <h2>Historial de Citas</h2>
+                <p>Aquí podrás visualizar el historial de citas de mantenimientos que has registrado</p>
+                <br>
+                <thead>
+                    <tr>
+                        <th>ID Cita</th>
+                        <th>Fecha Planeada</th>
+                        <th>Vehículo</th>
+                        <th>Fecha Registro</th>
+                        <th>Observaciones</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de citas se cargarán aquí -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-section contact">
+            <h2>Síguenos en:</h2>
+            <ul class="contact-icons">
+                <li><a href="https://www.facebook.com/UniBarranquilla/"><i class='bx bxl-facebook'></i></a></li>
+                <li><a href="https://x.com/UniBarranquilla"><i class='bx bxl-twitter'></i></a></li>
+                <li><a href="https://www.instagram.com/UniBarranquilla_/"><i class='bx bxl-instagram'></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UC76E4EukC9lbFQ4_rUD5nLw"><i class='bx bxl-youtube'></i></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; Proyecto 2024-2 | Camilo Hernandez y Santiago Macias
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <script src="../js/_aux.js"></script>
+    <script src="../js/fun_tc_e.js"></script>
+</body>
+
+</html>
+

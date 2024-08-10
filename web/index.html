@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto_CS - Iniciar Sesión</title>
+    <link rel="stylesheet" href="css/estilo_externo.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="base">
+      <form id="login-form" onsubmit="event.preventDefault(); M_Ingreso();">
+        <h1>Iniciar Sesión</h1>
+
+        <div class="entrada">
+          <input type="text" id="txtusuario" placeholder="Usuario" required />
+          <i class="bx bxs-user"></i>
+        </div>
+
+        <div class="entrada">
+          <input
+            type="password"
+            id="txtcontraseña"
+            placeholder="Contraseña"
+            required
+          />
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+
+        <button type="submit" class="btn">
+          Ingresar
+        </button>
+
+        <div class="links">
+          <p>
+            ¿No tienes una cuenta? <a href="html/registro.html">Regístrate</a>
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/fun_ir.js"></script>
+  </body>
+</html>

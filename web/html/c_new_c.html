@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto_CS</title>
+    <link rel="stylesheet" href="../css/estilo_cliente.css">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="../img/I_Logo.jpg" alt="Logo_Marca" />
+      </div>
+
+      <nav>
+        <ul class="Links">
+          <li><a href="c_enproceso.html">En Proceso</a></li>
+          <li><a href="c_finalizado.html">Finalizado</a></li>
+          <li><a href="c_new_c.html">Agendar</a></li>
+          <li><a href="c_citas.html">Historial</a></li>
+          <li><a href="c_nosotros.html">Nosotros</a></li>
+          <li>
+            <p><span id="Name_Usuario" onclick="mostrarAlertaUsuario()"></span></p>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn"
+        ><button onclick="M_Cerrar()">Cerrar Sesión</button></a
+      >
+    </header>
+
+    <div class="contenido">
+      <div class="content">
+        <div id="appointmentModal" class="modal">
+          <div class="modal-content">
+           
+            <form id="appointmentForm">
+              <h2>Agendar Cita</h2>
+              <div class="entrada">
+                <label for="fecha">Fecha:</label>
+                <select id="fecha" required></select>
+              </div>
+              <div class="entrada">
+                <label for="hora">Hora:</label>
+                <select id="hora" required>
+                  <option value="08:00">8:00 AM</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                </select>
+              </div>
+              <div class="entrada">
+                <input
+                  type="text"
+                  id="placa"
+                  placeholder="Placa (XXX-111)"
+                  required
+                />
+              </div>
+              <div class="entrada">
+                <label for="marca">Marca:</label>
+                <select id="marca" onchange="checkMarca()" required>
+                  <option value="Renault">Renault</option>
+                  <option value="Toyota">Toyota</option>
+                  <option value="Chevrolet">Chevrolet</option>
+                  <option value="Mazda">Mazda</option>
+                  <option value="Kia">Kia</option>
+                  <option value="Hyundai">Hyundai</option>
+                  <option value="Nissan">Nissan</option>
+                  <option value="Ford">Ford</option>
+                  <option value="Volkswagen">Volkswagen</option>
+                  <option value="Mitsubishi">Mitsubishi</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+              <div class="entrada" id="otraMarcaDiv" style="display: none">
+                <input
+                  type="text"
+                  id="otraMarca"
+                  placeholder="Especificar otra marca"
+                />
+              </div>
+              <div class="entrada">
+                <input type="text" id="color" placeholder="Color" required />
+              </div>
+              <div class="entrada">
+                <input type="text" id="modelo" placeholder="Modelo" required />
+              </div>
+              <button type="button" class="btn" onclick="M_Agendar()">
+                Agendar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-section contact">
+        <h2>Síguenos en:</h2>
+        <ul class="contact-icons">
+          <li>
+            <a href="https://www.facebook.com/UniBarranquilla/"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://x.com/UniBarranquilla"
+              ><i class="bx bxl-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/UniBarranquilla_/"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UC76E4EukC9lbFQ4_rUD5nLw"
+              ><i class="bx bxl-youtube"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; Proyecto 2024-2 | Camilo Hernandez y Santiago Macias
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/_aux.js"></script>
+    <script src="../js/fun_newc.js"></script>
+  </body>
+</html>

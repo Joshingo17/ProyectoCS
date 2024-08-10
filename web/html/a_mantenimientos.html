@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto_CS</title>
+    <link rel="stylesheet" href="../css/estilo_admin.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="../img/I_Logo.jpg" alt="Logo_Marca" />
+      </div>
+
+      <nav>
+        <br />
+        <br />
+        <ul class="Links">
+          <li><a href="a_comunidad.html">Comunidad</a></li>
+          <li><a href="a_mantenimientos.html">Mantenimientos</a></li>
+          <li><a href="a_citas.html">Citas</a></li>
+          <li><a href="a_estadisticas.html">Estadísticas</a></li>
+          <li><a href="a_reportes.html">Reportes</a></li>
+          <li>
+            <p><span id="Name_Usuario" onclick="mostrarAlertaUsuario()"></span></p>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn"
+        ><button onclick="M_Cerrar()">Cerrar Sesión</button></a
+      >
+    </header>
+
+    <div class="content">
+      <div class="form-container">
+        <h2>Mantenimientos</h2>
+        <p>Aquí podrá visualizar todos los mantenimientos de los mecánicos</p>
+        <table id="mantenimientosTable" class="display">
+          <thead>
+            <tr>
+              <th>ID Mantenimiento</th>
+              <th>Nombre del Cliente</th>
+              <th>Nombre del Mecánico</th>
+              <th>Información del Vehículo</th>
+              <th>Descripción del Mantenimiento</th>
+              <th>Cómo Llegó</th>
+              <th>Cómo Salió</th>
+              <th>Fecha de Inicio</th>
+              <th>Fecha de Finalización</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Los mantenimientos se cargarán aquí -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-section contact">
+        <h2>Síguenos en:</h2>
+        <ul class="contact-icons">
+          <li>
+            <a href="https://www.facebook.com/UniBarranquilla/"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://x.com/UniBarranquilla"
+              ><i class="bx bxl-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/UniBarranquilla_/"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UC76E4EukC9lbFQ4_rUD5nLw"
+              ><i class="bx bxl-youtube"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; Proyecto 2024-2 | Camilo Hernandez y Santiago Macias
+      </div>
+    </footer>
+
+    <script src="../js/_aux.js"></script>
+    <script src="../js/fun_ta_m.js"></script>
+  </body>
+</html>

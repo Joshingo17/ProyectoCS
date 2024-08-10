@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto_CS</title>
+    <link rel="stylesheet" href="../css/estilo_externo.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="base">
+        <form>
+            <h1>Regístrate</h1>
+
+            <div class="entrada">
+                <input type="text" id="txtnombre_completo" placeholder="Nombre completo">
+                <i class='bx bx-face'></i>
+            </div>
+
+            <div class="entrada">
+                <input type="email" id="txtemail" placeholder="Correo electrónico">
+                <i class='bx bx-envelope'></i>
+            </div>
+
+            <div class="entrada">
+                <input type="tel" id="txttelefono" placeholder="Teléfono">
+                <i class='bx bx-phone'></i>
+            </div>            
+
+            <div class="entrada">
+                <input type="text" id="txtusuario" placeholder="Usuario">
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="entrada">
+                <input type="password" id="txtcontrasena" placeholder="Contraseña">
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="entrada">
+                <input type="password" id="txtconfirmar_contrasena" placeholder="Confirmar contraseña">
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <button type="button" class="btn" onclick="M_Registro()">Registrar</button>
+            <button type="button" class="btn" onclick="location.href='../index.html'">Regresar</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/fun_ir.js"></script>
+</body>
+
+</html>

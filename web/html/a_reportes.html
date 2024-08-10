@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto_CS</title>
+    <link rel="stylesheet" href="../css/estilo_admin.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="../img/I_Logo.jpg" alt="Logo_Marca" />
+      </div>
+
+      <nav>
+        <br />
+        <br>
+        <ul class="Links">
+          <li><a href="a_comunidad.html">Comunidad</a></li>
+          <li><a href="a_mantenimientos.html">Mantenimientos</a></li>
+          <li><a href="a_citas.html">Citas</a></li>
+          <li><a href="a_estadisticas.html">Estadisticas</a></li>
+          <li><a href="a_reportes.html">Reportes</a></li>
+          <li>
+            <p><span id="Name_Usuario" onclick="mostrarAlertaUsuario()"></span></p>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn"
+        ><button onclick="M_Cerrar()">Cerrar Sesión</button></a
+      >
+    </header>
+
+    <div class="content">
+      <div class="container mt-5">
+        <form id="reportForm">
+          <div class="form-group">
+            <label for="reportType">Selecciona el tipo de reporte</label>
+            <select class="form-control" id="reportType" required>
+              <option value="">Seleccionar...</option>
+              <option value="mecanicos_en_proceso">Mecánicos en Proceso</option>
+              <option value="mecanicos_finalizado">Mecánicos Finalizado</option>
+              <option value="clientes_en_proceso">Clientes en Proceso</option>
+              <option value="clientes_finalizado">Clientes Finalizado</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Generar Reporte</button>
+        </form>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="reportModal"
+        tabindex="-1"
+        aria-labelledby="reportModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="reportModalLabel">Reporte</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="reportTableContainerModal"></div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                id="exportBtnModal"
+                class="btn btn-success"
+                style="display: none"
+              >
+                Exportar a Excel
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-section contact">
+        <h2>Síguenos en:</h2>
+        <ul class="contact-icons">
+          <li>
+            <a href="https://www.facebook.com/UniBarranquilla/"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://x.com/UniBarranquilla"
+              ><i class="bx bxl-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/UniBarranquilla_/"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UC76E4EukC9lbFQ4_rUD5nLw"
+              ><i class="bx bxl-youtube"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; Proyecto 2024-2 | Camilo Hernandez y Santiago Macias
+      </div>
+    </footer>
+    <script src="../js/_aux.js"></script>
+    <script src="../js/fun_newr.js"></script>
+  </body>
+</html>
